@@ -17,12 +17,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 from api import views
+from .views import IndexView
 
 router = routers.DefaultRouter()
 router.register(r'alunos', views.AlunoViewSet)
 router.register(r'turmas', views.TurmaViewSet)
 
 urlpatterns = [
+    url(r'^$', IndexView, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls))
 ]

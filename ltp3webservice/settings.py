@@ -25,7 +25,7 @@ SECRET_KEY = 'ly4evqm0yv)(&oh(#p!!30v--=cl54m6w5korslv#-^xk1u81e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['raelpx.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','raelpx.pythonanywhere.com']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'ltp3webservice.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
