@@ -3,26 +3,115 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LTP3 - Webservice</title>
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.6.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw="
+        crossorigin="anonymous" />
     <style>
-        .container *{
-            margin: 40px 0px;
+        html,
+        body {
+            font-family: 'Open Sans', serif;
+        }
+
+        .hero.is-info {
+            background: linear-gradient( rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url('https://unsplash.it/1200/900?random') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .hero .nav,
+        .hero.is-success .nav {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .hero .subtitle {
+            padding: 3rem 0;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #3273dc !important;
+        }
+
+        a:-webkit-any-link:active {
+            color: -webkit-activelink;
+        }
+        a:-webkit-any-link {
+            color: -webkit-link;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>LTP3 - Webservice</h1>
-        <a class="btn btn-lg btn-primary" href="/admin">ADMIN</a>
-        <br/>
-        <a class="btn btn-lg btn-danger" href="/api">API</a>
-    </div>
-</body>
+    <section class="hero is-info is-fullheight">
+        {% comment %}
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active">
+                                Home
+                            </a>
+                            <a class="navbar-item">
+                                Examples
+                            </a>
+                            <a class="navbar-item">
+                                Documentation
+                            </a>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined is-small" href="https://github.com/dansup/bulma-templates/blob/master/templates/landing.html">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>View Source</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div> {% endcomment %}
 
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-6 is-offset-3">
+                    <h1 class="title">
+                        LTP3 - Webservice
+                    </h1>
+                    <h2 class="subtitle">
+                        Bem-vindo ao webservice do projeto final de LTP3 2017.2
+                    </h2>
+                    <div class="box">
+                        <p>
+                            Para gerenciar alunos e turmas acesse a <a href="/admin">área administrativa</a>.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <p>
+                            Para realizar consultas, utilize o <a href="https://developer.atlassian.com/display/CROWDDEV/JSON+Requests+and+Responses#JSONRequestsandResponses-HTTPHeaders">formato JSON nas requisições</a> ou acesse a <a href="/api">interface html da API</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
